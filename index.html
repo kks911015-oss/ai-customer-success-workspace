@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Customer Success Workspace</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{background:#111827;color:white;padding:24px 28px}
+header h1{margin:0 0 6px;font-size:24px} header p{margin:0;color:#cbd5e1}
+.container{max-width:1180px;margin:24px auto;padding:0 18px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:white;border:1px solid #e5e7eb;border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(15,23,42,.04)}
+.metric{font-size:30px;font-weight:700;margin-top:8px}.label{font-size:13px;color:#64748b}
+.section{margin-top:20px}.section h2{font-size:18px;margin:0 0 12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bar{height:10px;background:#e5e7eb;border-radius:20px;overflow:hidden;margin-top:8px}.fill{height:100%;background:#2563eb;border-radius:20px}
+.row{margin:14px 0}.rowtop{display:flex;justify-content:space-between;font-size:13px}
+.badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:11px 8px;border-bottom:1px solid #eef0f4}th{color:#64748b;font-weight:600}
+button{border:0;border-radius:9px;background:#2563eb;color:white;padding:10px 14px;cursor:pointer}button:hover{opacity:.9}
+.ai{background:#eff6ff;border:1px solid #bfdbfe}.insight{margin:8px 0;padding:10px 12px;background:white;border-radius:9px;border-left:4px solid #2563eb}
+input{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:9px;margin:8px 0}
+@media(max-width:800px){.grid,.two{grid-template-columns:1fr 1fr}}@media(max-width:520px){.grid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>AI Customer Success Workspace</h1>
+  <p>Prototype dashboard for Workspace adoption, issue classification, resolution tracking and knowledge archiving.</p>
+</header>
+
+<div class="container">
+  <div class="grid">
+    <div class="card"><div class="label">Workspace Adoption</div><div class="metric">78%</div><div class="label">+6% vs. previous period</div></div>
+    <div class="card"><div class="label">Open Issues</div><div class="metric">24</div><div class="label">7 high priority</div></div>
+    <div class="card"><div class="label">Resolution Rate</div><div class="metric">86%</div><div class="label">within target SLA</div></div>
+    <div class="card"><div class="label">Archived Knowledge</div><div class="metric">142</div><div class="label">reusable solutions</div></div>
+  </div>
+
+  <div class="two section">
+    <div class="card">
+      <h2>Workspace Usage</h2>
+      <div class="row"><div class="rowtop"><span>Portfolio & Watchlists</span><b>91%</b></div><div class="bar"><div class="fill" style="width:91%"></div></div></div>
+      <div class="row"><div class="rowtop"><span>News & Research</span><b>83%</b></div><div class="bar"><div class="fill" style="width:83%"></div></div></div>
+      <div class="row"><div class="rowtop"><span>Charts & Analytics</span><b>72%</b></div><div class="bar"><div class="fill" style="width:72%"></div></div></div>
+      <div class="row"><div class="rowtop"><span>Data / Excel workflows</span><b>66%</b></div><div class="bar"><div class="fill" style="width:66%"></div></div></div>
+    </div>
+
+    <div class="card">
+      <h2>AI Customer Insights</h2>
+      <div class="insight"><b>Adoption opportunity:</b> Data/Excel workflows have the lowest usage. Consider targeted enablement for this workflow.</div>
+      <div class="insight"><b>Recurring issue:</b> 32% of recent tickets relate to data retrieval or workflow configuration.</div>
+      <div class="insight"><b>Proactive action:</b> Customers with repeated workflow tickets could be offered a short enablement session.</div>
+    </div>
+  </div>
+
+  <div class="two section">
+    <div class="card">
+      <h2>Issue Classification</h2>
+      <table>
+        <tr><th>Category</th><th>Cases</th><th>Share</th></tr>
+        <tr><td>Data / Content</td><td>9</td><td>38%</td></tr>
+        <tr><td>Platform / Technical</td><td>6</td><td>25%</td></tr>
+        <tr><td>Workflow / How-to</td><td>5</td><td>21%</td></tr>
+        <tr><td>Access / Permission</td><td>3</td><td>13%</td></tr>
+        <tr><td>Other</td><td>1</td><td>4%</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Resolution Progress</h2>
+      <div class="row"><div class="rowtop"><span>New</span><b>5</b></div><div class="bar"><div class="fill" style="width:21%"></div></div></div>
+      <div class="row"><div class="rowtop"><span>Investigating</span><b>7</b></div><div class="bar"><div class="fill" style="width:29%"></div></div></div>
+      <div class="row"><div class="rowtop"><span>Pending Customer</span><b>4</b></div><div class="bar"><div class="fill" style="width:17%"></div></div></div>
+      <div class="row"><div class="rowtop"><span>Resolved</span><b>8</b></div><div class="bar"><div class="fill" style="width:33%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="card section">
+    <h2>Case Management & Archive</h2>
+    <table>
+      <tr><th>Case</th><th>Issue</th><th>AI Category</th><th>Status</th><th>Archive Tag</th></tr>
+      <tr><td>WS-1042</td><td>Excel data export</td><td><span class="badge">Workflow</span></td><td>Resolved</td><td>Excel / Export</td></tr>
+      <tr><td>WS-1043</td><td>Missing market data</td><td><span class="badge">Data</span></td><td>Investigating</td><td>Data / Entitlement</td></tr>
+      <tr><td>WS-1044</td><td>Watchlist setup</td><td><span class="badge">How-to</span></td><td>Resolved</td><td>Watchlist</td></tr>
+      <tr><td>WS-1045</td><td>Login / access</td><td><span class="badge">Access</span></td><td>Pending Customer</td><td>Access / SSO</td></tr>
+    </table>
+  </div>
+
+  <div class="card section ai">
+    <h2>AI Case Classifier — Demo</h2>
+    <p class="label">Enter a customer issue. The prototype applies simple keyword rules to demonstrate the workflow. In production, this can be connected to an LLM/API.</p>
+    <input id="issue" placeholder="Example: Customer cannot export Workspace data to Excel">
+    <button onclick="classify()">Classify Issue</button>
+    <div id="result" style="margin-top:12px"></div>
+  </div>
+
+  <div class="card section">
+    <h2>How the AI workflow works</h2>
+    <ol>
+      <li>Collect case text and Workspace usage signals.</li>
+      <li>Classify the case into Data, Technical, Workflow, Access or Other.</li>
+      <li>Estimate priority and identify recurring patterns.</li>
+      <li>Track status from New → Investigating → Pending Customer → Resolved.</li>
+      <li>Convert successful resolutions into searchable knowledge/archive tags.</li>
+      <li>Surface adoption opportunities for proactive Customer Success follow-up.</li>
+    </ol>
+  </div>
+</div>
+
+<script>
+function classify(){
+  const text=(document.getElementById('issue').value||'').toLowerCase();
+  let category='Other', tag='General';
+  if(/excel|export|workflow|formula|watchlist|chart/.test(text)){category='Workflow';tag='Workflow / Enablement'}
+  else if(/data|price|quote|content|missing|incorrect/.test(text)){category='Data / Content';tag='Data / Content'}
+  else if(/login|access|permission|sso|password/.test(text)){category='Access / Permission';tag='Access / SSO'}
+  else if(/error|crash|slow|technical|bug|system/.test(text)){category='Platform / Technical';tag='Technical / Platform'}
+  document.getElementById('result').innerHTML=
+    '<div class="insight"><b>AI Classification:</b> '+category+
+    '<br><b>Suggested Archive Tag:</b> '+tag+
+    '<br><b>Next step:</b> Review related knowledge articles and determine whether proactive customer enablement is appropriate.</div>';
+}
+</script>
+</body>
+</html>
